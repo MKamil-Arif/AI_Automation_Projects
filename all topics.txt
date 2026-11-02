@@ -1,0 +1,47 @@
+1. Tree Detection & Counting
+
+2. Fish Species Recognition - Underwater fish images classification for marine study.
+
+3. Flower Species Recognition - Rose, Sunflower, Tulip etc. using color + petal features.
+
+4. Face Recognition Attendance System - Real-time face detection  attendance in Excel/DB.
+
+5. Number Plate Recognition (ANPR) - Detect car and read number plate using OCR.
+
+6. Finger Print Minutiae Matching  Fingerprint enhancement  matching system.
+
+7. Fake Currency Detection Detect fake notes using image features  texture, color, watermark.
+
+8. Face Mask & Helmet Detection For security  detect if person wearing mask/helmet or not.
+
+9. Image Caption Generator Input image  output sentence "A dog is sitting on grass".
+
+10. Image Super Resolution  Convert low resolution image to high resolution using SRCNN.
+
+11. Real time Emotion Recognition - From face, tell Happy, Sad, Angry, Surprised.
+
+12. Image Search Engine (CBIR) - Content Based Image Retrieval - Search similar images by color/texture, not by name.
+
+13. Road Pothole & Crack Detection - From road images, detect potholes for municipality.
+
+14. Waste Segregation  Recyclable vs Non-Recyclable  Camera classifies plastic, paper, metal, organic waste.
+
+15. Smart Auto Photo Editor  Auto brightness, contrast, histogram equalization, sharpness. Like Snapseed clone.
+
+16. Old Photo Restoration Tool - Remove scratches, noise, colorize black & white photos using inpainting.
+
+17. Background Remover & Changer  Segmentation  replace background. Like remove.bg.
+
+18. Image Forgery Detection - Detect copy-move forgery using block matching.
+
+19. Invisible Watermarking System Hide text logo in image using DWT, extract it for copyright.
+
+20. Plant Leaf Disease Detection Input leaf image  tell disease (Healthy, Rust, Blight). Dataset Plant Village.
+
+21. Tree Species Recognition from Leaf Classify Neem, Mango, Banyan etc. using shape  texture features.
+
+22. Fruit Ripeness Detector  From image tell Raw  Ripe or Rotten for Mango, Banana using color histogram.
+
+23. Blood Cell Counter - Count RBC/WBC from microscope blood smear image using morphological ops.
+
+24. Crop Weed Detection from Drone Image - Separate crop vs weed using green pixel segmentation.

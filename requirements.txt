@@ -1,0 +1,26 @@
+numpy>=1.26
+opencv-python>=4.8
+PyWavelets>=1.5
+scikit-image>=0.22
+scikit-learn>=1.4
+joblib>=1.3
+pandas>=2.0
+openpyxl>=3.1
+Pillow>=10.0
+streamlit>=1.50
+transformers>=4.40
+
+# PyTorch CPU build (smaller download):
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+torch>=2.2
+torchvision>=0.17
+
+# EasyOCR pulls in opencv-python-headless, which clashes with opencv-python. Install it without
+# dependencies, then its real dependencies:
+#   pip install easyocr --no-deps
+#   pip install python-bidi pyclipper shapely PyYAML ninja
+
+# YOLOv8 detectors (topics 5 and 13, trained by evaluation/train_detectors.py)
+ultralytics>=8.3
+# polars (used by ultralytics) needs AVX; on older CPUs without it install the compatible build:
+#   pip install "polars[rtcompat]"

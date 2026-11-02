@@ -1,0 +1,23 @@
+# API keys - never share or commit
+.env
+
+# personal data created by topic 4 (enrolled faces, attendance)
+faces_db/
+attendance/
+
+# large downloaded models (re-downloaded automatically)
+models/hf/
+
+__pycache__/
+outputs/
+
+# downloaded datasets (re-download with the links in README)
+datasets/
+
+# auto-downloaded on first use (ConvNeXt weights are 110 MB, over GitHub's 100 MB file limit)
+models/torch/
+models/easyocr/
+
+# local caches and run logs
+.ruff_cache/
+evaluation/*.log

@@ -1,0 +1,786 @@
+{
+ "blood": {
+  "dataset": "BCCD (364 smear images, VOC boxes)",
+  "images": 364,
+  "MAE RBC": 5.85,
+  "MAE WBC": 0.05,
+  "MAE Platelets": 0.74,
+  "count accuracy RBC": 0.4871,
+  "count accuracy WBC": 0.9516,
+  "count accuracy Platelets": 0.2521,
+  "WBC exact": 0.9533,
+  "note": "BCCD's RBC boxes are incomplete (many cells unlabelled), so the RBC error is pessimistic.",
+  "evaluated_in_s": 612
+ },
+ "backbones": {
+  "dataset": "TrashNet, 6 classes, shared 75/25 split",
+  "images": 2521,
+  "results": {
+   "mobilenet_v3_large": {
+    "test_accuracy": 0.9017,
+    "ms_per_image": 167.3
+   },
+   "convnext_tiny": {
+    "test_accuracy": 0.9287,
+    "ms_per_image": 144.5
+   }
+  },
+  "evaluated_in_s": 820
+ },
+ "waste": {
+  "dataset": "TrashNet, 6 classes, 75/25 split",
+  "images": 2521,
+  "test_accuracy": "92.9%",
+  "per_class": [
+   {
+    "Class": "cardboard",
+    "Precision": 0.97,
+    "Recall": 0.96,
+    "F1": 0.965
+   },
+   {
+    "Class": "glass",
+    "Precision": 0.943,
+    "Recall": 0.928,
+    "F1": 0.935
+   },
+   {
+    "Class": "metal",
+    "Precision": 0.897,
+    "Recall": 0.941,
+    "F1": 0.919
+   },
+   {
+    "Class": "paper",
+    "Precision": 0.966,
+    "Recall": 0.953,
+    "F1": 0.959
+   },
+   {
+    "Class": "plastic",
+    "Precision": 0.908,
+    "Recall": 0.9,
+    "F1": 0.904
+   },
+   {
+    "Class": "trash",
+    "Precision": 0.771,
+    "Recall": 0.794,
+    "F1": 0.783
+   }
+  ],
+  "seconds": 583,
+  "evaluated_in_s": 584
+ },
+ "fish": {
+  "dataset": "phylo-fish, 8 species, 75/25 split",
+  "images": 460,
+  "test_accuracy": "97.4%",
+  "per_class": [
+   {
+    "Class": "common_carp",
+    "Precision": 0.882,
+    "Recall": 1.0,
+    "F1": 0.938
+   },
+   {
+    "Class": "goldfish",
+    "Precision": 1.0,
+    "Recall": 0.8,
+    "F1": 0.889
+   },
+   {
+    "Class": "longnose_gar",
+    "Precision": 1.0,
+    "Recall": 1.0,
+    "F1": 1.0
+   },
+   {
+    "Class": "mosquitofish",
+    "Precision": 1.0,
+    "Recall": 1.0,
+    "F1": 1.0
+   },
+   {
+    "Class": "pickerel",
+    "Precision": 1.0,
+    "Recall": 1.0,
+    "F1": 1.0
+   },
+   {
+    "Class": "pumpkinseed_sunfish",
+    "Precision": 1.0,
+    "Recall": 1.0,
+    "F1": 1.0
+   },
+   {
+    "Class": "skipjack_herring",
+    "Precision": 0.909,
+    "Recall": 1.0,
+    "F1": 0.952
+   },
+   {
+    "Class": "stonecat_catfish",
+    "Precision": 1.0,
+    "Recall": 1.0,
+    "F1": 1.0
+   }
+  ],
+  "seconds": 133,
+  "evaluated_in_s": 133
+ },
+ "trees": {
+  "dataset": "AgML olive tree crowns (drone)",
+  "images": 12,
+  "MAE": 42.67,
+  "mean_abs_percent_error": 0.1345,
+  "count_accuracy": 0.8634,
+  "pairs (truth, predicted)": [
+   [
+    262,
+    350
+   ],
+   [
+    286,
+    292
+   ],
+   [
+    296,
+    283
+   ],
+   [
+    292,
+    296
+   ],
+   [
+    306,
+    303
+   ],
+   [
+    310,
+    291
+   ],
+   [
+    316,
+    311
+   ],
+   [
+    326,
+    315
+   ],
+   [
+    324,
+    328
+   ],
+   [
+    336,
+    2
+   ],
+   [
+    342,
+    363
+   ],
+   [
+    352,
+    348
+   ]
+  ],
+  "evaluated_in_s": 58
+ },
+ "leafdisease": {
+  "dataset": "PlantVillage (38 classes)",
+  "images": 114,
+  "accuracy": "95.6%",
+  "evaluated_in_s": 6
+ },
+ "potholes_yolo": {
+  "dataset": "keremberke (Roboflow) - model never saw the test images",
+  "train_images": 65,
+  "test_images": 25,
+  "imgsz": 512,
+  "epochs": 60,
+  "mAP50": 0.7368,
+  "mAP50-95": 0.3669,
+  "precision": 0.8709,
+  "recall": 0.5926
+ },
+ "lfw": {
+  "dataset": "LFW test pairs (sklearn), 1000 pairs",
+  "pairs": 1000,
+  "no face found in a pair": 0,
+  "accuracy @ 0.363 (SFace default)": 0.989,
+  "best threshold (on this set)": 0.34,
+  "accuracy @ best threshold": 0.99,
+  "ROC AUC": 0.9977,
+  "evaluated_in_s": 347
+ },
+ "watermark": {
+  "dataset": "20 Flickr8k photos, default settings (LL band, strength 36)",
+  "mean PSNR (dB)": 36.58,
+  "attacks": {
+   "No attack": {
+    "mean NC": 1.0,
+    "survived (NC >= 0.85)": "100%"
+   },
+   "JPEG quality 75": {
+    "mean NC": 0.999,
+    "survived (NC >= 0.85)": "100%"
+   },
+   "JPEG quality 50": {
+    "mean NC": 0.927,
+    "survived (NC >= 0.85)": "80%"
+   },
+   "Gaussian noise (sigma 5)": {
+    "mean NC": 0.999,
+    "survived (NC >= 0.85)": "100%"
+   },
+   "Brightness +20": {
+    "mean NC": 1.0,
+    "survived (NC >= 0.85)": "100%"
+   },
+   "Gaussian blur 3x3": {
+    "mean NC": 0.808,
+    "survived (NC >= 0.85)": "60%"
+   },
+   "Median filter 3x3": {
+    "mean NC": 0.765,
+    "survived (NC >= 0.85)": "50%"
+   },
+   "Resize 50% and back": {
+    "mean NC": 0.739,
+    "survived (NC >= 0.85)": "40%"
+   }
+  },
+  "evaluated_in_s": 11
+ },
+ "restoration": {
+  "dataset": "20 Flickr8k photos with simulated scratches, dust, grain, fading",
+  "SSIM damaged": 0.544,
+  "SSIM restored": 0.619,
+  "PSNR damaged (dB)": 16.78,
+  "PSNR restored (dB)": 19.11,
+  "evaluated_in_s": 13
+ },
+ "fer": {
+  "dataset": "FER-2013 test (100 faces per emotion)",
+  "calibration": "logistic regression on FER+ scores, fitted on 1000 FER-2013 training faces (5-fold 59.8%)",
+  "images": 700,
+  "accuracy raw FER+": 0.4914,
+  "per_class raw FER+": {
+   "angry": 0.39,
+   "disgust": 0.19,
+   "fear": 0.05,
+   "happy": 0.89,
+   "neutral": 0.91,
+   "sad": 0.28,
+   "surprise": 0.73
+  },
+  "accuracy calibrated": 0.6186,
+  "per_class calibrated": {
+   "angry": 0.57,
+   "disgust": 0.61,
+   "fear": 0.25,
+   "happy": 0.87,
+   "neutral": 0.71,
+   "sad": 0.55,
+   "surprise": 0.77
+  },
+  "accuracy": 0.6186,
+  "evaluated_in_s": 541
+ },
+ "potholes": {
+  "dataset": "keremberke pothole-segmentation: 25 held-out road photos",
+  "images": 25,
+  "Classical (darkness)": {
+   "precision": 0.0115,
+   "recall": 0.037,
+   "f1": 0.0175
+  },
+  "YOLOv8 (trained)": {
+   "precision": 0.5429,
+   "recall": 0.7037,
+   "f1": 0.6129
+  },
+  "evaluated_in_s": 26
+ },
+ "mask": {
+  "dataset": "Face-Mask-Detection (DamarJati / Kaggle 12k), 400 + 400 photos, 75/25 split",
+  "test_images": 200,
+  "trained CNN accuracy": 1.0,
+  "classical: face found": 0.925,
+  "classical accuracy (when a face is found)": 0.773,
+  "classical accuracy (all, no face = wrong)": 0.715,
+  "evaluated_in_s": 220
+ },
+ "helmet": {
+  "dataset": "keremberke hard-hat detection (test photos -> head crops >= 20 px)",
+  "crops": {
+   "hardhat": 616,
+   "no-hardhat": 120
+  },
+  "test_images": 184,
+  "trained CNN accuracy": 0.9837,
+  "evaluated_in_s": 189
+ },
+ "leaves": {
+  "dataset": "Medicinal leaves (6 species incl. Neem), 75/25 split",
+  "images": 1380,
+  "classes": [
+   "arjun_leaf",
+   "curry_leaf",
+   "marsh_pennywort_leaf",
+   "mint_leaf",
+   "neem_leaf",
+   "rubble_leaf"
+  ],
+  "test_images": 345,
+  "results": {
+   "Classical": 0.9942,
+   "Deep (CNN features)": 1.0,
+   "Classical + Deep": 1.0
+  },
+  "best": "Deep (CNN features)",
+  "evaluated_in_s": 327
+ },
+ "corel": {
+  "dataset": "Corel-1K (Wang), 10 classes x 100",
+  "images": 1000,
+  "results": [
+   {
+    "feature": "Deep (CNN features)",
+    "distance": "Chi-square",
+    "P@10": 0.9811,
+    "mAP": 0.939
+   },
+   {
+    "feature": "Deep (CNN features)",
+    "distance": "Euclidean",
+    "P@10": 0.9805,
+    "mAP": 0.9323
+   },
+   {
+    "feature": "Deep (CNN features)",
+    "distance": "Cosine",
+    "P@10": 0.9805,
+    "mAP": 0.9323
+   },
+   {
+    "feature": "Deep (CNN features)",
+    "distance": "Histogram intersection",
+    "P@10": 0.9804,
+    "mAP": 0.934
+   },
+   {
+    "feature": "Color + Texture",
+    "distance": "Chi-square",
+    "P@10": 0.7556,
+    "mAP": 0.5466
+   },
+   {
+    "feature": "Color + Texture",
+    "distance": "Euclidean",
+    "P@10": 0.6603,
+    "mAP": 0.4057
+   },
+   {
+    "feature": "Color + Texture",
+    "distance": "Cosine",
+    "P@10": 0.6826,
+    "mAP": 0.4609
+   },
+   {
+    "feature": "Color + Texture",
+    "distance": "Histogram intersection",
+    "P@10": 0.7727,
+    "mAP": 0.5675
+   },
+   {
+    "feature": "Color histogram (HSV)",
+    "distance": "Chi-square",
+    "P@10": 0.73,
+    "mAP": 0.5117
+   },
+   {
+    "feature": "Color histogram (HSV)",
+    "distance": "Euclidean",
+    "P@10": 0.6108,
+    "mAP": 0.3554
+   },
+   {
+    "feature": "Color histogram (HSV)",
+    "distance": "Cosine",
+    "P@10": 0.63,
+    "mAP": 0.4468
+   },
+   {
+    "feature": "Color histogram (HSV)",
+    "distance": "Histogram intersection",
+    "P@10": 0.7259,
+    "mAP": 0.5047
+   },
+   {
+    "feature": "Color moments",
+    "distance": "Chi-square",
+    "P@10": 0.5684,
+    "mAP": 0.3568
+   },
+   {
+    "feature": "Color moments",
+    "distance": "Euclidean",
+    "P@10": 0.5683,
+    "mAP": 0.3585
+   },
+   {
+    "feature": "Color moments",
+    "distance": "Cosine",
+    "P@10": 0.5555,
+    "mAP": 0.3419
+   },
+   {
+    "feature": "Color moments",
+    "distance": "Histogram intersection",
+    "P@10": 0.3044,
+    "mAP": 0.2559
+   },
+   {
+    "feature": "Texture (LBP)",
+    "distance": "Chi-square",
+    "P@10": 0.5913,
+    "mAP": 0.4062
+   },
+   {
+    "feature": "Texture (LBP)",
+    "distance": "Euclidean",
+    "P@10": 0.5791,
+    "mAP": 0.3837
+   },
+   {
+    "feature": "Texture (LBP)",
+    "distance": "Cosine",
+    "P@10": 0.5803,
+    "mAP": 0.3888
+   },
+   {
+    "feature": "Texture (LBP)",
+    "distance": "Histogram intersection",
+    "P@10": 0.5881,
+    "mAP": 0.3989
+   },
+   {
+    "feature": "Texture (GLCM)",
+    "distance": "Chi-square",
+    "P@10": 0.4805,
+    "mAP": 0.3444
+   },
+   {
+    "feature": "Texture (GLCM)",
+    "distance": "Euclidean",
+    "P@10": 0.4784,
+    "mAP": 0.3417
+   },
+   {
+    "feature": "Texture (GLCM)",
+    "distance": "Cosine",
+    "P@10": 0.4735,
+    "mAP": 0.331
+   },
+   {
+    "feature": "Texture (GLCM)",
+    "distance": "Histogram intersection",
+    "P@10": 0.1962,
+    "mAP": 0.2174
+   }
+  ],
+  "best": {
+   "feature": "Deep (CNN features)",
+   "distance": "Chi-square",
+   "P@10": 0.9811,
+   "mAP": 0.939
+  },
+  "evaluated_in_s": 670
+ },
+ "cropweed": {
+  "dataset": "CWFID (Haug & Ostermann 2014), carrot field, official test split",
+  "test_images": 20,
+  "vegetation IoU": {
+   "ExG (Excess Green)": 0.8541,
+   "ExG - ExR": 0.8538,
+   "HSV green range": 0.7295
+  },
+  "crop / weed rules": {
+   "Crop rows": {
+    "pixel accuracy": 0.0291,
+    "crop recall": 0.0744,
+    "weed recall": 0.0154,
+    "balanced accuracy": 0.0449,
+    "images where the rule failed": 18
+   },
+   "Plant size": {
+    "pixel accuracy": 0.283,
+    "crop recall": 0.717,
+    "weed recall": 0.1517,
+    "balanced accuracy": 0.4343,
+    "images where the rule failed": 0
+   },
+   "Trained (plant shape + colour)": {
+    "pixel accuracy": 0.7845,
+    "crop recall": 0.5821,
+    "weed recall": 0.8458,
+    "balanced accuracy": 0.7139,
+    "images where the rule failed": 0
+   }
+  },
+  "note": "Trained rule = SVM on 11 plant shape / colour features, trained on the 40 CWFID train images. Crop rows needs 2+ rows; CWFID close-ups show one carrot row.",
+  "evaluated_in_s": 34
+ },
+ "flowers": {
+  "dataset": "TF-Flowers (Google), 5 classes, 75/25 split",
+  "images": 3670,
+  "classes": [
+   "daisy",
+   "dandelion",
+   "roses",
+   "sunflowers",
+   "tulips"
+  ],
+  "test_images": 918,
+  "results": {
+   "Classical": 0.6089,
+   "Deep (CNN features)": 0.9477,
+   "Classical + Deep": 0.9412
+  },
+  "best": "Deep (CNN features)",
+  "evaluated_in_s": 1104
+ },
+ "caption": {
+  "dataset": "Flickr8k test (100 images x 5 human captions)",
+  "images": 100,
+  "BLEU-1": 0.7263,
+  "BLEU-2": 0.5434,
+  "BLEU-3": 0.377,
+  "BLEU-4": 0.2332,
+  "examples": [
+   {
+    "model": "Two dogs playing in the snow.",
+    "human": "The dogs are in the snow in front of a fence ."
+   },
+   {
+    "model": "A man playing with his dog in the pool.",
+    "human": "a brown and white dog swimming towards some in the pool"
+   },
+   {
+    "model": "A man and woman dancing in the street.",
+    "human": "A man and a woman in festive costumes dancing ."
+   },
+   {
+    "model": "A group of people sitting at tables outside of a restaurant.",
+    "human": "A couple of people sit outdoors at a table with an umbrella and talk ."
+   },
+   {
+    "model": "American football player during a game against american football team.",
+    "human": "A man is wearing a Sooners red football shirt and helmet ."
+   }
+  ],
+  "evaluated_in_s": 1409
+ },
+ "sr": {
+  "dataset": "Set5 + Set14 + BSD100 (HR images, anti-aliased bicubic downscale like MATLAB)",
+  "results": [
+   {
+    "benchmark": "Set5",
+    "scale": 2,
+    "images": 5,
+    "bicubic PSNR": 32.64,
+    "SRCNN PSNR": 33.55,
+    "gain dB": 0.916
+   },
+   {
+    "benchmark": "Set5",
+    "scale": 3,
+    "images": 5,
+    "bicubic PSNR": 29.32,
+    "SRCNN PSNR": 30.36,
+    "gain dB": 1.04
+   },
+   {
+    "benchmark": "Set5",
+    "scale": 4,
+    "images": 5,
+    "bicubic PSNR": 27.31,
+    "SRCNN PSNR": 28.29,
+    "gain dB": 0.971
+   },
+   {
+    "benchmark": "Set14",
+    "scale": 2,
+    "images": 14,
+    "bicubic PSNR": 29.23,
+    "SRCNN PSNR": 30.22,
+    "gain dB": 0.988
+   },
+   {
+    "benchmark": "Set14",
+    "scale": 3,
+    "images": 14,
+    "bicubic PSNR": 26.48,
+    "SRCNN PSNR": 27.42,
+    "gain dB": 0.944
+   },
+   {
+    "benchmark": "Set14",
+    "scale": 4,
+    "images": 14,
+    "bicubic PSNR": 24.91,
+    "SRCNN PSNR": 25.7,
+    "gain dB": 0.79
+   },
+   {
+    "benchmark": "BSD100",
+    "scale": 2,
+    "images": 100,
+    "bicubic PSNR": 28.37,
+    "SRCNN PSNR": 29.24,
+    "gain dB": 0.869
+   },
+   {
+    "benchmark": "BSD100",
+    "scale": 3,
+    "images": 100,
+    "bicubic PSNR": 25.95,
+    "SRCNN PSNR": 26.63,
+    "gain dB": 0.677
+   },
+   {
+    "benchmark": "BSD100",
+    "scale": 4,
+    "images": 100,
+    "bicubic PSNR": 24.7,
+    "SRCNN PSNR": 25.23,
+    "gain dB": 0.53
+   }
+  ],
+  "evaluated_in_s": 53
+ },
+ "fruit": {
+  "dataset": "darthraider fruit-ripeness (raw / ripe banana and mango), 600 train + 200 test photos",
+  "SVM accuracy on a 25 % split of the train part": 0.8667,
+  "Colour rules": {
+   "accuracy": 0.36,
+   "raw_banana": 0.54,
+   "raw_mango": 0.0,
+   "ripe_banana": 0.1,
+   "ripe_mango": 0.8
+  },
+  "Trained SVM model": {
+   "accuracy": 0.935,
+   "raw_banana": 1.0,
+   "raw_mango": 1.0,
+   "ripe_banana": 0.8,
+   "ripe_mango": 0.94
+  },
+  "evaluated_in_s": 45
+ },
+ "fingerprint": {
+  "dataset": "FVC2002 DB1_B (test) - threshold chosen on DB2_B (other sensor)",
+  "genuine pairs": 280,
+  "impostor pairs": 45,
+  "threshold (from DB2)": 0.09,
+  "accuracy @ threshold": 0.7723,
+  "FNMR @ threshold": 0.2643,
+  "FMR @ threshold": 0.0,
+  "EER (DB1)": 0.1109,
+  "ROC AUC (DB1)": 0.9416,
+  "EER (DB2)": 0.1435,
+  "mean genuine / impostor score (DB1)": "0.206 / 0.014",
+  "evaluated_in_s": 66
+ },
+ "copymove": {
+  "dataset": "30 Flickr8k photos, simulated copy-move (textured 64-96 px block) + JPEG 90",
+  "images": 30,
+  "Block matching (DCT)": {
+   "detection rate": 0.9667,
+   "false alarm rate": 0.0,
+   "accuracy": 0.9833
+  },
+  "Keypoints (SIFT)": {
+   "detection rate": 0.7667,
+   "false alarm rate": 0.0,
+   "accuracy": 0.8833
+  },
+  "evaluated_in_s": 74
+ },
+ "background": {
+  "dataset": "DUTS-TE (100 random test images, salient-object masks; U2-Net was trained on DUTS-TR)",
+  "U2-Net (deep, offline)": {
+   "mean IoU": 0.7637,
+   "F-measure": 0.8493,
+   "MAE": 0.0376,
+   "IoU >= 0.8": "62%"
+  },
+  "GrabCut (rectangle)": {
+   "mean IoU": 0.3816,
+   "F-measure": 0.4472,
+   "MAE": 0.2258,
+   "IoU >= 0.8": "10%"
+  },
+  "GrabCut (saliency seeds)": {
+   "mean IoU": 0.4374,
+   "F-measure": 0.5309,
+   "MAE": 0.1754,
+   "IoU >= 0.8": "11%"
+  },
+  "evaluated_in_s": 550
+ },
+ "plates_yolo": {
+  "dataset": "keremberke (Roboflow) - model never saw the test images",
+  "train_images": 400,
+  "test_images": 200,
+  "imgsz": 480,
+  "epochs": 25,
+  "mAP50": 0.9918,
+  "mAP50-95": 0.6719,
+  "precision": 0.985,
+  "recall": 0.9657
+ },
+ "plates": {
+  "dataset": "keremberke license-plate test (various countries, never used for training)",
+  "images": 200,
+  "classical": {
+   "top-1 plate found (IoU>=0.5)": 0.27,
+   "within top-3": 0.38
+  },
+  "YOLOv8 (trained)": {
+   "top-1 plate found (IoU>=0.5)": 0.97,
+   "within top-3": 0.975
+  },
+  "evaluated_in_s": 72
+ },
+ "plateocr": {
+  "dataset": "sonnetechnology license-plate-text-recognition (test split, plate-like labels only)",
+  "note": "Mostly Vietnamese and Indian plates; some labels are themselves wrong (e.g. MH 20.80 20 for MH 20 BQ 20).",
+  "YOLOv8 (trained)": {
+   "images": 437,
+   "plate read": 0.9176,
+   "exact match": 0.103,
+   "character accuracy": 0.6604
+  },
+  "Classical morphology": {
+   "images": 437,
+   "plate read": 0.8604,
+   "exact match": 0.0664,
+   "character accuracy": 0.5796
+  },
+  "evaluated_in_s": 494
+ },
+ "plateocr_gemini": {
+  "dataset": "first 60 photos of the plate-text test set",
+  "reader": "YOLOv8 + Gemini (cloud)",
+  "exact match": 0.2,
+  "character accuracy": 0.2911,
+  "no answer / error": 40,
+  "evaluated_in_s": 1537,
+  "exact match (answered only)": 0.6,
+  "character accuracy (answered only)": 0.8733,
+  "note": "Failed calls = free-tier quota / server errors, counted as wrong in the first two numbers."
+ }
+}
